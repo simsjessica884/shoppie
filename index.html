@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-48TR3BDBJP"
@@ -19,24 +18,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
-    - primary meta tags
-  -->
     <title>Shoppie - メンズ夏コレクション</title>
     <meta name="title" content="Shoppie - メンズ夏コレクション" />
-    <meta
-      name="description"
-      content="これはmd-irfan-hasan-fahimによって作成されたeコマースHTMLテンプレートです"
-    />
 
-    <!-- 
-    - favicon
-  -->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
-    <!-- 
-    - google font link
-  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,18 +31,127 @@
     />
     <link rel="stylesheet" href="./assets/fonts/font.css" />
 
-    <!-- 
-    - custom css link
-  -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- 
-    - preload images
-  -->
     <link rel="preload" as="image" href="./assets/images/hero-banner.jpg" />
+    <style>
+      .cookie-modal {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: black;
+        padding: 50px;
+        z-index: 1000;
+        display: flex;
+      }
+
+      .cookie-content {
+        width: 90%;
+        position: relative;
+      }
+
+      .cookie-close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+        font-size: 50px;
+      }
+
+      .cookie-button {
+        margin: 10px 5px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+      .accept {
+        background-color: green;
+      }
+
+      .reject {
+        background-color: red;
+      }
+
+      .button-container {
+        display: flex;
+        width: 100%;
+      }
+
+      @keyframes vibrate {
+        0%,
+        100% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-3px, 3px);
+        }
+        40% {
+          transform: translate(3px, -3px);
+        }
+        60% {
+          transform: translate(-3px, -3px);
+        }
+        80% {
+          transform: translate(3px, 3px);
+        }
+      }
+
+      .vibrate {
+        animation: vibrate 0.1s linear;
+        animation-iteration-count: 20;
+      }
+
+      .emoji {
+        display: inline-block;
+        font-size: 50px;
+        margin-left: 10px;
+        animation: slideEmoji 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes slideEmoji {
+        0% {
+          transform: translateX(50px);
+        }
+        100% {
+          transform: translateX(-10px);
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <div id="cookie-consent-modal" class="cookie-modal">
+      <div class="cookie-content">
+        <span id="cookie-close" class="cookie-close">&times;</span>
+        <p>
+          当サイトでは、Google
+          Analyticsを使用してユーザーのウェブサイトでの利用状況を収集し、分析しています。以下の情報が収集されます:
+        </p>
+        <ul>
+          <li>IPアドレス</li>
+          <li>デバイスとブラウザの情報</li>
+          <li>閲覧したページとその滞在時間</li>
+          <li>訪問元の参照元（例: 検索エンジン、リンクなど）</li>
+          <li>位置情報（大まかな地域）</li>
+        </ul>
+        <div class="button-container">
+          <button id="cookie-accept" class="cookie-button accept">
+            同意する
+          </button>
+          <button id="cookie-reject" class="cookie-button reject">
+            拒否する
+          </button>
+          <span class="emoji">👈🏻</span>
+        </div>
+      </div>
+    </div>
+
     <header class="header" data-header>
       <div class="container">
         <a href="#" class="logo">
@@ -155,10 +250,6 @@
             />
           </div>
         </div>
-
-        <!-- 
-        - #PRODUCT
-      -->
 
         <section class="section product" aria-label="product">
           <div class="container">
@@ -272,10 +363,6 @@
             </ul>
           </div>
         </section>
-
-        <!-- 
-        - #FEATURE
-      -->
 
         <section class="section feature" aria-label="feature-label">
           <div class="container">
@@ -499,10 +586,6 @@
           </div>
         </section>
 
-        <!-- 
-        - #OFFER
-      -->
-
         <section
           class="offer has-bg-image"
           style="background-image: url('./assets/images/offer-bg.jpg')"
@@ -526,10 +609,6 @@
         </section>
       </article>
     </main>
-
-    <!-- 
-    - #FOOTER
-  -->
 
     <footer class="footer">
       <div class="container">
@@ -655,14 +734,8 @@
       </div>
     </footer>
 
-    <!-- 
-    - custom js link
-  -->
     <script src="./assets/js/script.js"></script>
 
-    <!-- 
-    - ionicon link
-  -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -671,5 +744,71 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("cookie-consent-modal");
+        const acceptButton = document.getElementById("cookie-accept");
+        const rejectButton = document.getElementById("cookie-reject");
+        const closeButton = document.getElementById("cookie-close");
+        let isVibrating = false;
+        let scrollTimeout;
+
+        // Show the modal on page load
+        modal.style.display = "flex";
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+          const date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          const expires = "expires=" + date.toUTCString();
+          document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to start vibration
+        function startVibration() {
+          acceptButton.classList.add("vibrate");
+          rejectButton.classList.add("vibrate");
+          isVibrating = true;
+        }
+
+        // Function to stop vibration
+        function stopVibration() {
+          acceptButton.classList.remove("vibrate");
+          rejectButton.classList.remove("vibrate");
+          isVibrating = false;
+        }
+
+        // Event listener for scroll
+        window.addEventListener("scroll", function () {
+          if (!isVibrating) {
+            startVibration();
+          }
+
+          // Clear the previous timeout if the user continues to scroll
+          clearTimeout(scrollTimeout);
+
+          // Set a timeout to stop the vibration when scrolling stops
+          scrollTimeout = setTimeout(function () {
+            stopVibration();
+          }, 300); // 300ms delay after the user stops scrolling
+        });
+
+        // Button click events
+        acceptButton.onclick = function () {
+          setCookie("googleAnalyticsConsent", "accepted", 365);
+          modal.style.display = "none";
+        };
+
+        rejectButton.onclick = function () {
+          setCookie("googleAnalyticsConsent", "rejected", 365);
+          modal.style.display = "none";
+        };
+
+        closeButton.onclick = function () {
+          modal.style.display = "none";
+        };
+      });
+    </script>
   </body>
 </html>
